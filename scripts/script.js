@@ -45,3 +45,24 @@ if (result2 === 0) {
     courseList.push(new_item);
     console.log(courseList);
 };
+
+
+function createCourseArray() {
+    let course_array = [];
+    for (let item of courseList) {
+        let course = { "code": `${item.code} - ${item.name}`, "date": "Winter 2023" };
+        course_array.push(course);
+    };
+    // if (result2 === 0) {
+    //     course_array[course_array.length - 1].date = "null";
+    // };
+    if (result2 === 0) {
+        // delete course_array[course_array.length - 1];
+        course_array.pop();
+    };
+    return course_array;
+};
+
+console.log(createCourseArray());
+
+let CourseList2 = createCourseArray();
